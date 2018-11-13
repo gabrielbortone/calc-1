@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\Divide.cs" />
+    <Compile Include="Controller\Operacao.cs" />
+    <Compile Include="Controller\Minus.cs" />
+    <Compile Include="Controller\Multiply.cs" />
+    <Compile Include="Controller\Plus.cs" />
+    <Compile Include="Controller\Square.cs" />
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
