@@ -164,6 +164,7 @@
             // 
             // btnResult
             // 
+            this.btnResult.Enabled = false;
             this.btnResult.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnResult.Image = global::Calc_1._0.Properties.Resources.Result;
             this.btnResult.Location = new System.Drawing.Point(261, 299);
@@ -171,6 +172,7 @@
             this.btnResult.Size = new System.Drawing.Size(134, 64);
             this.btnResult.TabIndex = 11;
             this.btnResult.UseVisualStyleBackColor = true;
+            this.btnResult.Click += new System.EventHandler(this.btnResult_Click);
             // 
             // btnPoint
             // 
@@ -203,6 +205,7 @@
             this.btnDivide.Size = new System.Drawing.Size(64, 64);
             this.btnDivide.TabIndex = 14;
             this.btnDivide.UseVisualStyleBackColor = true;
+            this.btnDivide.Click += new System.EventHandler(this.btnDivide_Click);
             // 
             // btnMinus
             // 
@@ -213,6 +216,7 @@
             this.btnMinus.Size = new System.Drawing.Size(64, 64);
             this.btnMinus.TabIndex = 15;
             this.btnMinus.UseVisualStyleBackColor = true;
+            this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
             // 
             // btnPlus
             // 
@@ -224,6 +228,7 @@
             this.btnPlus.TabIndex = 16;
             this.btnPlus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPlus.UseVisualStyleBackColor = true;
+            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
             // 
             // btnSquare
             // 
@@ -234,6 +239,7 @@
             this.btnSquare.Size = new System.Drawing.Size(64, 64);
             this.btnSquare.TabIndex = 17;
             this.btnSquare.UseVisualStyleBackColor = true;
+            this.btnSquare.Click += new System.EventHandler(this.btnSquare_Click);
             // 
             // btnMultiply
             // 
@@ -244,6 +250,7 @@
             this.btnMultiply.Size = new System.Drawing.Size(64, 64);
             this.btnMultiply.TabIndex = 18;
             this.btnMultiply.UseVisualStyleBackColor = true;
+            this.btnMultiply.Click += new System.EventHandler(this.btnMultiply_Click);
             // 
             // statusStrip1
             // 
@@ -275,6 +282,7 @@
             this.visor.TabIndex = 1;
             this.visor.Text = "0";
             this.visor.TextChanged += new System.EventHandler(this.visor_TextChanged);
+            this.visor.Click += new System.EventHandler(this.visor_Click);
             // 
             // FormPrincipal
             // 

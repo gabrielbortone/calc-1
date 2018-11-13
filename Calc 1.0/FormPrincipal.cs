@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Calc_1._0.Controle;
 
 namespace Calc_1._0
 {
@@ -16,8 +17,7 @@ namespace Calc_1._0
         {
             InitializeComponent();
         }
-
-        string visor_aux;
+        Operacao operacao;
         double num1, num2;
 
         public string AddNumber(string visor, double num)
@@ -36,7 +36,6 @@ namespace Calc_1._0
 
         private void visor_TextChanged(object sender, EventArgs e)
         {
-            
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
@@ -101,11 +100,66 @@ namespace Calc_1._0
 
         }
 
+        private void btnPlus_Click(object sender, EventArgs e)
+        {
+            operacao = new Plus();
+            num1 = Convert.ToDouble(visor.Text);
+            visor.Text = "0";
+            btnResult.Enabled = true;
+            btnPoint.Enabled = true;
+        }
+
+        private void btnMinus_Click(object sender, EventArgs e)
+        {
+            operacao = new Minus();
+            num1 = Convert.ToDouble(visor.Text);
+            visor.Text = "0";
+            btnResult.Enabled = true;
+            btnPoint.Enabled = true;
+        }
+
+        private void btnMultiply_Click(object sender, EventArgs e)
+        {
+            operacao = new Multiply();
+            num1 = Convert.ToDouble(visor.Text);
+            visor.Text = "0";
+            btnResult.Enabled = true;
+            btnPoint.Enabled = true;
+        }
+
+        private void btnDivide_Click(object sender, EventArgs e)
+        {
+            operacao = new Divide();
+            num1 = Convert.ToDouble(visor.Text);
+            visor.Text = "0";
+            btnResult.Enabled = true;
+            btnPoint.Enabled = true;
+        }
+
+        private void btnSquare_Click(object sender, EventArgs e)
+        {
+            num1 = Convert.ToDouble(visor.Text);
+            operacao = new Square();
+            visor.Text = Convert.ToString(operacao.Resultado(num1, 0));
+        }
+
+        private void visor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnResult_Click(object sender, EventArgs e)
+        {
+            num2 = Convert.ToDouble(visor.Text);
+            visor.Text = Convert.ToString(operacao.Resultado(num1, num2));
+            btnResult.Enabled = false;
+            btnPoint.Enabled = true;
+        }
+
         private void button13_Click(object sender, EventArgs e)
         {
             btnPoint.Enabled = true;
             visor.Text = "0";
-            visor_aux = "";
             num1 = 0;
             num2 = 0;
         }
